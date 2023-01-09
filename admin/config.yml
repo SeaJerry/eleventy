@@ -27,41 +27,20 @@ collections:
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Component Type", name: "componentType", widget: "select", options: ["Hero", "Image Hero", "Basic Blog Post"]}
   # Our pages e.g. About
-  # - name: "pages"
-  #   label: "Page"
-  #   folder: "pages"
-  #   create: false # Change to true to allow editors to create new pages
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - { label: "Title", name: "title", widget: "string" }
-  #     - { label: "Publish Date", name: "date", widget: "datetime" }
-  #     - { label: "Permalink", name: "permalink", widget: "string" }
-  #     - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-  #       name: "eleventyNavigation"
-  #       widget: "object"
-  #       fields:
-  #         - { label: "Key", name: "key", widget: "string" }
-  #         - { label: "Order", name: "order", widget: "number", default: 0 }
-  #     - { label: "Body", name: "body", widget: "markdown" }
-
-    - name: pages
-      label: Pages
-      label_singular: 'Page'
-      folder: pages
-      create: true
-      # adding a nested object will show the collection folder structure
-      nested:
-        depth: 100 # max depth to show in the collection tree
-        summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
-      fields:
-        - label: Title
-          name: title
-          widget: string
-        - label: Body
-          name: body
-          widget: markdown
-      # adding a meta object with a path property allows editing the path of entries
-      # moving an existing entry will move the entire sub tree of the entry to the new location
-      meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
+  - name: "pages"
+    label: "Page"
+    folder: "pages"
+    create: false # Change to true to allow editors to create new pages
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
+        name: "eleventyNavigation"
+        widget: "object"
+        fields:
+          - { label: "Key", name: "key", widget: "string" }
+          - { label: "Order", name: "order", widget: "number", default: 0 }
+      - { label: "Body", name: "body", widget: "markdown" }
