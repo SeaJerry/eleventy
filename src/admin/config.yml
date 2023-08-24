@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: kindsys/eleventy-decap-tailwind-template
+  name: git-gateway
   branch: main
-  site_domain: 11ty-decap-starter.kind.systems
 
 publish_mode: editorial_workflow
 media_folder: "img/"
